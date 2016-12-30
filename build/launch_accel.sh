@@ -1,0 +1,1 @@
+sudo x86_64-softmmu/qemu-system-x86_64 -m 1024 -enable-kvm -snapshot -device accelerator-pcie,chardev=tst -chardev socket,path=/tmp/accelerator_socket,id=tst -drive file=../../images/test_img.qcow2,cache=none -kernel ../../images/bzImage -append "root=/dev/sda1"
